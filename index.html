@@ -58,8 +58,8 @@
 				</section>
 
 				<section data-background-image="./images/support.jpeg" alt="support" class="full" data-background-size="cover">
-					<p class="box fragment">My passion is enabling others to do their job as easily as possible, preferrably with open source tools.</p>
-					<p class="box fragment">I'm here to tell you this important fact...</p>
+					<h3 class="box">I'm not a coder!</h3>
+					<p class="box fragment">My passion is enabling others to do their job as easily as possible, preferrably with open source tools. I'm here to tell you this important fact...</p>
 					<small class="attribution" style="color:black">Pexel CC0</small>
 					<aside class="notes">I'm not a coder! I like to find and fix blockers, for example by making documentation easier to follow or teaching people to use GitHub, or by coming up with workflows like the one I'm talking about today</aside>
 				</section>
@@ -82,8 +82,9 @@
 				</section>
 
 				<!-- TODO add all the things image -->
-				<section>
-					<h2>Automate all the things!</h2>
+				<section data-background-image="./images/all-the-things.jpg" alt="all the things" class="full" data-background-size="cover">
+					<h2 class="box" style="color:white">Automate all the things!</h2>
+					<small class="attribution" style="color:black">Hyperbole and a Half</small>
 				</section>
 
 				<section data-background-image="./images/ford_production_line.jpg" alt="ford production line" class="full" data-background-size="cover">
@@ -105,8 +106,8 @@
 				</section>
 
 				<section data-background-image="./images/thinking-cat.jpg" alt="thinking cat" class="full" data-background-size="cover">
-					<p class="box-left" style="margin-top:200px !important">But we need a way to derive some elements such as human-readable titles and descriptions</p>
-				<small class="attribution" style="color: white">pxfuel.com, free for commercial use</small>
+					<p class="box-left" style="margin-top:200px !important">But we need a way to derive some elements such as human-readable titles, descriptions and keywords</p>
+				<small class="attribution" style="color: white">pxfuel.com</small>
 				<aside class="notes">Human-readable titles, descriptions, keywords and so on are much harder to do programatically, and also hard for users to do at scale. What works manually for a few records doesn't scale to thousands.</aside>
 				</section>
 
@@ -123,20 +124,16 @@
 
 				<section data-background-image="./images/files.jpg" alt="files" class="full" data-background-size="cover">
 					<p class="box">Crawler is a script for discovering data (spatial or non-spatial) in file systems, databases and on websites. For each data source it finds, it derives as much of the metadata as it can.</p>
+					<img src="./images/titellus_logo.png" class="box"/>
 					<small class="attribution">wikimedia.org CC-BY-3.0</small>
-					<aside class="notes">Crawler builds on some ETL libraries built by Titellus, for Talend ETL's spatial plugin. It's open source. It can be run as a web service (using tomcat) or as a cross-platform shell script</aside>
+					<aside class="notes">Crawler builds on some ETL libraries built by Titellus, for Talend ETL's spatial plugin. It's open source. It can be run as a web service (using tomcat) or as a cross-platform shell script. We've adapted it to work with non-spatial datasets, and also to output metadata in the UK Gemini metadata profile</aside>
 				</section>
 
-				<section>
-					<p>Crawler started life as a workflow for the Spatial extension for Talend, both built by titellus. We've extended it to work with non-spatial datasets and to output UK Gemini metadata</p>
-					<img src="./images/titellus_logo.png" />
-					<aside class="notes">Crawler builds on some ETL libraries built by Titellus, for Talend ETL's spatial plugin. It's open source. It can be run as a web service (using tomcat) or as a cross-platform shell script</aside>
-				</section>
+				
 
 
 				<section data-background-image="./images/crawler_step_one.png" alt="files" class="full" data-background-size="cover">
-					<span class="fragment fade-in"><p class="box-right" style="margin-top:350px !important">Crawler creates a metadata record for each data source it discovers, with place-holders for the elements it can't derive.</p></span>
-					<aside class="notes">It can create static XML, or insert records directly into any Metadata Catalog with a CSW-T (Transactional CSW) endpoint. It can create new or update existig records.</aside>
+					<aside class="notes">Crawler creates an xml metadata record for each data source it discovers, with place-holders for the elements it can't derive. It can insert records directly into any Metadata Catalog with a CSW-T (Transactional CSW) endpoint, not just GeoNetwork. It can create new or update existig records.</aside>
 				</section>
 
 				<section data-background-image="./images/scriptorium.jpg" alt="scribes" class="full" data-background-size="cover">
@@ -152,14 +149,11 @@
 
 
 				<section data-background-image="./images/crawler_step_two.png" alt="crawler step two" class="full" data-background-size="cover" data-background-position="top">
-					<span class="fragment fade-in">
-						<p class="box-right">Then we use the GeoNetwork API wrapped in a python script to update the records in the catalog from the spreadsheet.</p>
-					</span>
-					<aside class="notes">Even though GeoNetwork is hosted on AWS in the cloud, we can let users run these scripts using environments such as Cloud9</aside>
+					<aside class="notes">Then we use the GeoNetwork API wrapped in a python script to update the records in the catalog from the spreadsheet. Even though GeoNetwork is hosted on AWS in the cloud, we can let users run these scripts using environments such as Cloud9</aside>
 				</section>
 
 				<section data-background-image="./images/crawler_step_three.png" alt="crawler step three" class="full" data-background-size="cover" data-background-position="top">
-					<span class="fragment fade-in"><p class="box-right">Alternatively, the completed csv can be emailed to an address associated with an S3 bucket accessible to the GeoNetwork processing script</p></span>
+					<aside class="notes">Alternatively, the completed csv can be emailed to an address associated with an S3 bucket accessible to the GeoNetwork processing script</aside>
 				</section>
 
 				
@@ -169,7 +163,7 @@
 				</section>
 
 				<section data-background-image="./images/jonny5.jpg" alt="engage guide" class="full" data-background-size="cover">
-					<p class="box-left" style="margin-top:100px !important">With some python machine-learning and natural language processing libraries we can try and extract some useful information from the data</p>
+					<p class="box-left" style="margin-top:100px !important">With some python machine-learning and natural language processing libraries we can try and extract that missing information from the data itself</p>
 					<aside class="notes">All the libraries are open source. This exists mainly in colab notebooks at the moment!</aside>
 					<small class="attribution">http://www.popgun80sband.co.uk/blog/top-ten-robots-of-the-80s/</small>
 				</section>
@@ -183,33 +177,31 @@
 						</p>
 						<p class="fragment fade-in-then-out">
 							<span class="box-left">
-								<em>Extract Keywords</em><br /> 
+								<em>Extract Keywords:</em><br /> 
 						lochs, riparian, rivers, woodland
 							</span>
 						</p>
 						<p class="fragment fade-in-then-out">
 							<span class="box-left">
-								<em>Geoparse</em><br />
+								<em>Geoparse:</em><br />
 						scotland, atlantic
 							</span>
 						</p>
 						<p class="fragment fade-in">
 							<span class="box-left">
-								<em>Auto-Summarise</em><br /><small>A deterministic river temperature model to prioritise management of riparian woodlands to reduce summer maximum river temperatures and a riparian woodland prioritisation score that looks to maximise the benefits of Riparian tree planting for protecting Scotland’s rivers from the adverse effects of climate change.</small>
+								<em>Auto-Summarise:</em><br /><small>A deterministic river temperature model to prioritise management of riparian woodlands to reduce summer maximum river temperatures and a riparian woodland prioritisation score that looks to maximise the benefits of Riparian tree planting for protecting Scotland’s rivers from the adverse effects of climate change.</small>
 							</span>
 						</p>
 					<aside class="notes">This is a real example of putting a complex block of text through our prototype ML workflow. We can generate keywords and geographic keywords, and auto-summarise to create a short description. Metadata keywords should be used inside the abstract. This needs to be done intelligently, eg as part of sentences rather than lists. You should include keywords that work for all levels of expertise, and take into consideration variations in spelling, synonyms and so on. Geographic keywords help to provide context for the user.</aside>
 				</section>
 
 				<section data-background-image="./images/NLPG Step One.png" alt="NLPG" class="full" data-background-size="cover" data-background-position="left">
-					<span class="fragment fade-in-then-out">
-						<p class="box-right" style="margin-top:150px !important">We can then rank our results and refine our keywords by comparing with codelists</p>
+						<aside class="notes">We can then rank our results and refine our keywords by comparing with codelists</aside>
 					</span>
 				</section>
 
 				<section data-background-image="./images/NLPG Step One.png" alt="guidance" class="full" data-background-size="cover" data-background-position="right">
-					<span class="fragment fade-in-then-out"><p class="box-right" style="margin-top:150px !important">Once we have these additional elements we can combine them with the output from Crawler to complete our metadata</p></span>
-					<aside class="notes">We have a large corpus of metadata, and some best practice guidelines for data sharing to help train our model and define some rules. The guidance is from an SEO perspective and indicates how the elements like titles and abstracts might be displayed in standard web search results. So (eg) the min and max length for an abstract</aside>
+					<aside class="notes">Once we have these additional elements we can combine them with the output from Crawler to complete our metadata. We have a large corpus of metadata, and some best practice guidelines for data sharing to help train our model and define some rules. The guidance is from an SEO perspective and indicates how the elements like titles and abstracts might be displayed in standard web search results. So (eg) the min and max length for an abstract</aside>
 				</section>
 
 
@@ -219,15 +211,15 @@
 					<small class="attribution">Robert Jones, Pixabay</small>
 				</section>
 
-				<section data-background-image="./images/fly.jpg" alt="fly" class="full" data-background-size="cover">
-					<p class="box-right" style="margin-top:150px !important">The end result will be valid metadata records that need minimal(*) human intervention</p>
-					<p class="fragment box-right" style="margin-top:350px !important">* You probably want to review them before publishing</p>
+				<section data-background-image="./images/dog_pc.jpg" alt="dog" class="full" data-background-size="cover">
+					<p class="box-left" style="margin-top:150px !important">The end result will be valid metadata records that need minimal(*) human intervention</p>
+					<p class="fragment box-left" style="margin-top:350px !important">* You probably want to review them before publishing</p>
 					<aside class="notes">These are designed to be a starting-point rather than fully completed records. Some human intervention is expected. In GeoNetwork at least, you can keep them up to date using harvesting (defining which elements should and should not be overwritten)</aside>
-					<small class="attribution">US Airforce</small>
+					<small class="attribution">The internet</small>
 				</section>
 
 				<section data-background-image="./images/work_in_progress.jpg" alt="Rube Goldberg" class="full" data-background-size="cover">
-					<p class="box">The usual caveats apply!</p>
+					<h2 class="box">The usual caveats apply!</h2>
 					<aside class="notes">We have all the pieces but need to glue them together into a usable product. It's a bit heath robinson right now. There are lots of moving parts, and areas where we're going to get expert assistance such as on SEO (to test our ML results against what they would do) and to ensure we're using the right ML models and so on.</aside>
 					<small class="attribution">Flickr: Kevan CC BY 2.0</small>
 				</section>
@@ -296,14 +288,13 @@
 				progress: true,
 				center: true,
 				hash: true,
-				showNotes: false,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 			Reveal.configure({ pdfSeparateFragments: true });
-			Reveal.configure({ showNotes: true });
+			Reveal.configure({ showNotes: false });
 
 		</script>
 
