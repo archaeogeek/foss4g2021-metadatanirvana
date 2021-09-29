@@ -1,5 +1,5 @@
-# Automating Metadata Creation: Closer than we think
+# Metadata Nirvana: Data discovery and metadata creation untouched by human hands
 
-Presentation to US Department of the Interior Open Source Geospatial Group, March 2021. Covers a proof-of-concept workflow for full data discovery and automated metadata creation using open source tools. 
+Presentation to FOSS4G 2021. Covers a proof-of-concept workflow for full data discovery and automated metadata creation using open source tools. 
 
-See https://archaeogeek.github.io/metadataautomation_talk/ for the live version of this site.
+See https://archaeogeek.github.io/foss4g2021-metadatanirvana/ for the live version of this site.
